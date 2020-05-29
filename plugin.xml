@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin>
+   <class>org.igniterealtime.openfire.plugins.skypeintegration.SkypeIntegrationPlugin</class>
+   <name>Skype Integration Plugin</name>
+   <description>Provides hooks, intercepts, and providers to assist in integrating with SfB XMPP</description>
+   <author>Andrew Waterson</author>
+   <version>${project.version}</version>
+   <date>05/29/2020</date>
+   <minServerVersion>4.5.0</minServerVersion>
+   <minJavaVersion>1.8</minJavaVersion>
+    <!-- And if it won't work after:
+   <maxServerVersion>4.3.0</maxServerVersion>
+   -->
+
+   <adminconsole>
+      <tab id="tab-server">
+         <sidebar id="sidebar-server-settings">
+            <item id="skypeintegration-plugin-page" name="Skype Integration" url="skype-integration-settings.jsp" description="Settings for Skype Integration Plugin" />
+         </sidebar>
+      </tab>
+   </adminconsole>
+</plugin>
