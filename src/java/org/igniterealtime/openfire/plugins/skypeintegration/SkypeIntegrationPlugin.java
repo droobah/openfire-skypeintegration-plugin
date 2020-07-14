@@ -18,6 +18,8 @@ public class SkypeIntegrationPlugin implements Plugin {
 
     public void initializePlugin(PluginManager pluginManager, File file) {
         skypeDomain = JiveGlobals.getProperty("skypeintegration.ldapdomain", "example.com");
+        System.setProperty("org.jitsi.jicofo.DISABLE_AUTO_OWNER",
+                            JiveGlobals.getProperty("skypeintegration.disableautoowner", "false") );
         UserNameManager.addUserNameProvider(skypeDomain, provider);
         provider.SetupCaches();
     }
